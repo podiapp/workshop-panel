@@ -30,7 +30,8 @@ class SelectShoppingHeader extends StatelessWidget {
                 Expanded(
                   flex: 2,
                   child: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
                     decoration: BoxDecoration(
                       border: Border.all(color: PodiColors.dark[100]!),
                       borderRadius: BorderRadius.circular(4.0),
@@ -72,9 +73,12 @@ class SelectShoppingHeader extends StatelessWidget {
                       ),
                       const SizedBox(width: 16),
                       InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          SnackbarWidget.error("TESTE");
+                        },
                         borderRadius: BorderRadius.circular(100),
-                        child: SvgPicture.asset(PodiIcons.logoutOutline, height: 12, width: 12),
+                        child: SvgPicture.asset(PodiIcons.logoutOutline,
+                            height: 12, width: 12),
                       )
                     ],
                   ),

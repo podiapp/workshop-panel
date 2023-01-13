@@ -13,7 +13,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   dartz: ^0.10.1                # Implementacao de um estilo de retorno diferente (Either)
   ds_podi:                      # Design System do Podi
-    path: ../ds_podi/
+    git:
+      url: https://github.com/podiapp/ds_podi.git
+      ref: main
   flutter:
     sdk: flutter
   flutter_localizations:

@@ -186,9 +186,11 @@ packages:
   ds_podi:
     dependency: "direct main"
     description:
-      path: "../ds_podi"
-      relative: true
-    source: path
+      path: "."
+      ref: main
+      resolved-ref: cb982883ea89834e55df3bebe64c90e35af53e0a
+      url: "https://github.com/podiapp/ds_podi.git"
+    source: git
     version: "0.0.1"
   extended_masked_text:
     dependency: transitive

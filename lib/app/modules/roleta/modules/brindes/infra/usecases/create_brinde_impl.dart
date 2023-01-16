@@ -3,10 +3,11 @@ import 'package:workshop_web/app/modules/roleta/modules/brindes/domain/errors/gi
 import 'package:workshop_web/app/modules/roleta/domain/entities/simple_gift.dart';
 import 'package:dartz/dartz.dart';
 import 'package:workshop_web/app/modules/roleta/modules/brindes/domain/usecases/create_brinde.dart';
-import 'package:workshop_web/app/modules/roleta/modules/brindes/infra/repositories/gift_repository.dart';
+
+import '../../domain/interfaces/gift_interface.dart';
 
 class CreateBrindeImpl implements CreateBrinde {
-  final GiftRepository _repo;
+  final GiftInterface _repo;
 
   CreateBrindeImpl(this._repo);
 

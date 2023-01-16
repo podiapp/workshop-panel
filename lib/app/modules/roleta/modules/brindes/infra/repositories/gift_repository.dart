@@ -1,10 +1,12 @@
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:workshop_web/app/modules/roleta/modules/brindes/domain/entities/gift.dart';
 import 'package:workshop_web/app/modules/roleta/modules/brindes/domain/errors/gift_failure.dart';
 import 'package:workshop_web/app/modules/roleta/domain/entities/simple_gift.dart';
 import 'package:dartz/dartz.dart';
 import 'package:workshop_web/app/modules/roleta/modules/brindes/domain/interfaces/gift_interface.dart';
 import 'package:workshop_web/app/modules/roleta/modules/brindes/infra/datasource/gift_datasource.dart';
 import 'package:workshop_web/app/modules/roleta/modules/brindes/infra/errors/invalid_request.dart';
+import 'package:workshop_web/app/shared/stores/pagination_store.dart';
 
 import '../../../../../../shared/utils.dart';
 
@@ -29,5 +31,13 @@ class GiftRepository implements GiftInterface {
       "status": gift.status.index
     };
     return Right(await _datasource.createBrinde(body));
+  }
+
+  @override
+  Future<Either<GiftFailure, List<Gift>>> fetchBrindes(
+    Map<String, dynamic> filters,
+    PaginationStore pagination,
+  ) async {
+    return Right(await _datasource.fetchBrindes(filters, pagination));
   }
 }

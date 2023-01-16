@@ -7,7 +7,8 @@ import 'package:workshop_web/app/shared/utils.dart';
 class RoletaModule extends Module {
   @override
   final List<Bind> binds = [
-    Bind.lazySingleton((i) => CreateBrindeStore()),
+    ...BrindesModule.exports,
+    Bind.lazySingleton((i) => CreateBrindeStore(i())),
   ];
 
   @override

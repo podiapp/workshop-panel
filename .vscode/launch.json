@@ -1,0 +1,11 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "workshop-panel",
+      "request": "launch",
+      "type": "dart",
+      "args": ["--web-renderer", "html", "--dart-define", "ENV=sb"]
+    }
+  ]
+}

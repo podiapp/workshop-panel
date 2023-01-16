@@ -11,7 +11,7 @@ class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Intl.defaultLocale = 'pt_BR';
-    Modular.setInitialRoute(PodiPages.BrindesModule());
+    Modular.setInitialRoute(PodiPages.RoletaModule());
     return StyledToast(
       locale: const Locale('pt', 'BR'),
       isIgnoring: false,
